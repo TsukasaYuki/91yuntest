@@ -14,4 +14,6 @@ backtraceroute()
 	mtrback "117.28.254.129" "厦门电信CN2"
 	mtrback "113.207.32.65" "重庆联通"
 	mtrback "183.192.160.3" "上海移动"
+	mtrback "220.132.2.1" "台北Hinet"
+	mtrback "210.51.160.44" "網通9929"
 }
