@@ -1,6 +1,6 @@
 bandwidth()
 {
-	#获得相关数据
+	#獲得相關數據
 	wget --no-check-certificate https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py 1>/dev/null 2>&1
         bd=`python speedtest.py --share`
         download=`echo "$bd" | awk -F ':' '/Download/{print $2}'`
@@ -8,15 +8,15 @@ bandwidth()
         hostby=`echo "$bd" | grep 'Hosted'`
         rm -rf speedtest.py
 
-	#显示在屏幕上
+	#顯示在屏幕上
 	next
 	echo "$hostby"
-	echo "上传   : $download"
-	echo "下载   : $upload"
+	echo "上傳   : $download"
+	echo "下載   : $upload"
 
 
-	#写入日志文件
-	echo "===开始测试带宽===">>${dir}/$logfilename
+	#寫入日誌文件
+	echo "===開始測試帶寬===">>${dir}/$logfilename
 	echo "$bd">>${dir}/$logfilename
-	echo -e "===带宽测试结束==\n\n">>${dir}/$logfilename
+	echo -e "===帶寬測試結束==\n\n">>${dir}/$logfilename
 }
