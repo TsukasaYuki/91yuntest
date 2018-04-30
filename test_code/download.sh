@@ -30,5 +30,17 @@ download()
     speed_test 'http://speedtest.fra02.softlayer.com/downloads/test100.zip' 'Softlayer, Frankfurt, DE'
     speed_test 'http://speedtest.sng01.softlayer.com/downloads/test100.zip' 'Softlayer, Singapore, SG'
     speed_test 'http://speedtest.hkg02.softlayer.com/downloads/test100.zip' 'Softlayer, HongKong, CN'
+    speed_test 'http://speedtest-nyc1.digitalocean.com/100mb.test' 'DigitalOcean, New York, US'
+    speed_test 'http://speedtest-ams2.digitalocean.com/100mb.test' 'DigitalOcean, Amsterdam, NL'
+    speed_test 'http://speedtest-sfo1.digitalocean.com/100mb.test' 'DigitalOcean, San Francisco, CA'
+    speed_test 'http://speedtest-sgp1.digitalocean.com/100mb.test' 'DigitalOcean, Singapore, SG'
+    speed_test 'http://speedtest-lon1.digitalocean.com/100mb.test' 'DigitalOcean, London, UK'
+    speed_test 'http://speedtest-fra1.digitalocean.com/100mb.test' 'DigitalOcean, Frankfurt, DE'
+    speed_test 'http://speedtest-tor1.digitalocean.com/100mb.test' 'DigitalOcean, Toronto, Canada'
+    speed_test 'http://speedtest-blr1.digitalocean.com/100mb.test' 'DigitalOcean, Tamil Nadu, IN'
+    speed_test 'http://tpdb.speed2.hinet.net/test_200m.zip' 'HiNET, Taiwan            '
+    speed_test 'http://speed.anet.net.tw/250M.zip' 'Taiwan Fixed Network, Taiwan'
+    speed_test 'http://speed.vee.com.tw/200mb.bin' 'VeeTIME Corp, Taiwan'
+    speed_test 'http://enctc.ntpc.edu.tw/ezfiles/0/1000/attach/44/pta_830_4499836_05105.zero' 'TANet, New Taipei City, Taiwan'
 	echo -e "===end ipv4 download===\n\n">>${dir}/$logfilename
 }
