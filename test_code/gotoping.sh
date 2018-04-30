@@ -8,12 +8,12 @@ testping()
 
 gotoping()
 {
-	echo "===开始测试跳板ping===">>${dir}/$logfilename
+	echo "===開始測試跳板ping===">>${dir}/$logfilename
 	next
 	testping speedtest.tokyo.linode.com Linode日本
 	testping hnd-jp-ping.vultr.com Vultr日本
-	testping 192.157.214.6 Budgetvm洛杉矶
-	testping downloadtest.kdatacenter.com kdatacenter韩国SK
-	testping 210.92.18.1 星光韩国KT
-	echo "===跳板ping测试结束===">>${dir}/$logfilename
+	testping 192.157.214.6 Budgetvm洛杉磯
+	testping downloadtest.kdatacenter.com kdatacenter韓國SK
+	testping 210.92.18.1 星光韓國KT
+	echo "===跳板ping測試結束===">>${dir}/$logfilename
 }
