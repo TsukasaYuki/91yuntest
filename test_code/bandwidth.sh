@@ -1,12 +1,12 @@
 bandwidth()
 {
 	#获得相关数据
-	wget --no-check-certificate https://raw.githubusercontent.com/91yun/speedtest-cli/master/speedtest_cli.py 1>/dev/null 2>&1
-	bd=`python speedtest_cli.py --share`
-	download=`echo "$bd" | awk -F ':' '/Download/{print $2}'`
-	upload=`echo "$bd" | awk -F ':' '/Upload/{print $2}'`
-	hostby=`echo "$bd" | grep 'Hosted'`
-	rm -rf speedtest_cli.py
+	wget --no-check-certificate https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py 1>/dev/null 2>&1
+        bd=`python speedtest.py --share`
+        download=`echo "$bd" | awk -F ':' '/Download/{print $2}'`
+        upload=`echo "$bd" | awk -F ':' '/Upload/{print $2}'`
+        hostby=`echo "$bd" | grep 'Hosted'`
+        rm -rf speedtest.py
 
 	#显示在屏幕上
 	next
