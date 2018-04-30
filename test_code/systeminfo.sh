@@ -8,7 +8,7 @@ get_opsy() {
 
 systeminfo()
 {
-	#获得相关数据
+	#獲得相關數據
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//' )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 	freq=$( awk -F: '/cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//' )
@@ -29,7 +29,7 @@ systeminfo()
 	fi
 	vm=`virt-what`
 
-	#显示在屏幕上
+	#顯示在屏幕上
 	next
 	echo "CPU model            : $cname"
 	echo "Number of cores      : $cores"
@@ -40,8 +40,8 @@ systeminfo()
 	echo "Virtualization       : $vm"
 	echo "IPaddr               : $IPaddr"
 
-	#写入日志文件
-	echo "===系统基本信息===">>${dir}/$logfilename
+	#寫入日誌文件
+	echo "===系統基本資訊===">>${dir}/$logfilename
 	echo "CPU:$cname">>${dir}/$logfilename
 	echo "cores:$cores">>${dir}/$logfilename
 	echo "freq:$freq">>${dir}/$logfilename
