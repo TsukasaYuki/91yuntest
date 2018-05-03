@@ -2,7 +2,7 @@ bandwidth()
 {
 	#獲得相關數據
 	wget --no-check-certificate https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py 1>/dev/null 2>&1
-        bd=`python speedtest.py --share`
+        bd=`python speedtest.py --share --server 5008`
         download=`echo "$bd" | awk -F ':' '/Download/{print $2}'`
         upload=`echo "$bd" | awk -F ':' '/Upload/{print $2}'`
         hostby=`echo "$bd" | grep 'Hosted'`
