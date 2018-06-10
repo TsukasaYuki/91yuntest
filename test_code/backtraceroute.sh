@@ -11,7 +11,7 @@ backtraceroute()
 	next
 	mtrback "14.215.116.1" "广州电信（天翼云）"
 	mtrback "101.227.255.45" "上海电信（天翼云）"
-	mtrback "220.133.25.1" "HiNET中華電信(家寬)" 
+	mtrback "220.132.12.1" "HiNET中華電信" 
 	mtrback "60.199.206.249" "Taiwan Fixed Network 台灣固網"
 	mtrback "117.28.254.129" "厦门电信CN2"
 	mtrback "113.207.32.65" "重庆联通"
