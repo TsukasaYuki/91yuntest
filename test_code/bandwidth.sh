@@ -4,7 +4,7 @@ bandwidth()
 	apt install speedtest-cli
 	#wget --no-check-certificate https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py 1>/dev/null 2>&1
         #bd=`python speedtest.py --share --server 7456`
-        bd=`speedtest-cli --share --server 7456`
+        bd=`speedtest-cli --share`
         download=`echo "$bd" | awk -F ':' '/Download/{print $2}'`
         upload=`echo "$bd" | awk -F ':' '/Upload/{print $2}'`
         hostby=`echo "$bd" | grep 'Hosted'`
@@ -13,8 +13,8 @@ bandwidth()
 	#顯示在屏幕上
 	next
 	echo "$hostby"
-	echo "上傳   : $download"
-	echo "下載   : $upload"
+	echo "下載   : $download"
+	echo "上傳   : $upload"
 
 
 	#寫入日誌文件
