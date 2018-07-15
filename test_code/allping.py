@@ -29,7 +29,7 @@ def getip(iphtml):
 
 def allping(gethtml):
 	f="===all ping start===\n"
-	f=f+"%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s"%("id","ping的地點","IP","IP所在地","丟包率","MIX","MAX","延遲","TTL")+"\n"
+	f=f+"%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s"%("id","ping的地点","IP","IP所在地","丢包率","MIX","MAX","延迟","TTL")+"\n"
 	result=re.finditer(r"<script>parent\.call_ping\(([^<]*)\);<\/script>",gethtml)
 	for r in result:
 		js=json.loads(r.group(1))
@@ -40,8 +40,8 @@ def allping(gethtml):
 
 def showping(gethtml):
 	f="===ping show===\n"
-	f=f+"%s\t%s\t%s\t%s\t%s\t%s\t%s\n"%("線路","節點數目","最快節點","延遲","最慢節點","延遲","平均延遲")+"\n"
-	print("%-10s%-24s\t%-10s%-24s\t%-10s%-10s\n"%("線路","最快節點","延遲","最慢節點","延遲","平均延遲"))
+	f=f+"%s\t%s\t%s\t%s\t%s\t%s\t%s\n"%("线路","节点数目","最快节点","延迟","最慢节点","延迟","平均延迟")+"\n"
+	print("%-10s%-24s\t%-10s%-24s\t%-10s%-10s\n"%("线路","最快节点","延迟","最慢节点","延迟","平均延迟"))
 	result=re.finditer(r"<script>parent\.summary_ping\(([^<]*)\)<\/script>",gethtml)
 	for r in result:
 		js=json.loads(r.group(1))
@@ -59,12 +59,11 @@ def showping(gethtml):
 
 text=requests.get("http://www.ipip.net/ping.php?a=send&host="+ip+"&area=china",verify=False)
 content=text.text
-c="===開始進行全國PING測試===\n"
+c="===开始进行全国PING测试===\n"
 c=c+allping(content)
 c=c+showping(content)
-c=c+"===進行全國PING測試結束===\n"
+c=c+"===进行全国PING测试结束===\n"
 with open(logfilename,"a+") as file:
 	file.write(c)
-
 
 
