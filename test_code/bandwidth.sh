@@ -4,7 +4,7 @@ bandwidth()
 	apt install speedtest-cli
 	#wget --no-check-certificate https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py 1>/dev/null 2>&1
         #bd=`python speedtest.py --share --server 7456`
-        bd=`speedtest-cli --share`
+        bd=`speedtest-cli --share --server 7456`
         download=`echo "$bd" | awk -F ':' '/Download/{print $2}'`
         upload=`echo "$bd" | awk -F ':' '/Upload/{print $2}'`
         hostby=`echo "$bd" | grep 'Hosted'`
