@@ -1,6 +1,5 @@
 bandwidth()
 {
-	#獲得相關數據
 	apt install speedtest-cli
 	bd=`speedtest-cli --share --server 4505
         download=`echo "$bd" | awk -F ':' '/Download/{print $2}'`
