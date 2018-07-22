@@ -3,7 +3,8 @@ bandwidth()
 	#獲得相關數據
 	apt install speedtest-cli
         #bd=`speedtest-cli --share --server 18445`
-        bd=`speedtest-cli --share --server 4505`
+	#bd=`speedtest-cli --share --server 4505`
+        bd=`speedtest-cli --share --server 10392`
         download=`echo "$bd" | awk -F ':' '/Download/{print $2}'`
         upload=`echo "$bd" | awk -F ':' '/Upload/{print $2}'`
         hostby=`echo "$bd" | grep 'Hosted'`
