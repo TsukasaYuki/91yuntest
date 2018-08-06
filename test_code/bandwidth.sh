@@ -1,8 +1,8 @@
 bandwidth()
 {
 	#獲得相關數據
-	apt install speedtest-cli
-	bd=`speedtest-cli --share --server 4505`
+	wget --no-check-certificate https://raw.githubusercontent.com/91yun/speedtest-cli/master/speedtest_cli.py 1>/dev/null 2>&1
+	bd=`python speedtest_cli.py --share --server 4505`
         download=`echo "$bd" | awk -F ':' '/Download/{print $2}'`
         upload=`echo "$bd" | awk -F ':' '/Upload/{print $2}'`
         hostby=`echo "$bd" | grep 'Hosted'`
