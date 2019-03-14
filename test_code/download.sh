@@ -19,11 +19,6 @@ download()
 	echo "===star ipv4 download===">>${dir}/$logfilename
 	echo -e "Node Name\t\t\tIPv4 address\t\tDownload Speed" | tee -a ${dir}/$logfilename
     speed_test 'http://cachefly.cachefly.net/10mb.test' 'CacheFly'
-    speed_test 'http://speedtest.tokyo.linode.com/10MB-tokyo.bin' 'Linode, Tokyo, JP'
-    speed_test 'http://speedtest.singapore.linode.com/10MB-singapore.bin' 'Linode, Singapore, SG'
-    speed_test 'http://speedtest.london.linode.com/10MB-london.bin' 'Linode, London, UK'
-    speed_test 'http://speedtest.frankfurt.linode.com/10MB-frankfurt.bin' 'Linode, Frankfurt, DE'
-    speed_test 'http://speedtest.fremont.linode.com/10MB-fremont.bin' 'Linode, Fremont, CA'
     speed_test 'http://speedtest.dal05.softlayer.com/downloads/test10.zip' 'Softlayer, Dallas, TX'
     speed_test 'http://speedtest.sea01.softlayer.com/downloads/test10.zip' 'Softlayer, Seattle, WA'
     speed_test 'http://speedtest.fra02.softlayer.com/downloads/test10.zip' 'Softlayer, Frankfurt, DE'
