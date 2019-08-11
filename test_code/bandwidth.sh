@@ -1,13 +1,13 @@
 bandwidth()
 {
 	#獲得相關數據
-	wget --no-check-certificate https://raw.githubusercontent.com/91yun/speedtest-cli/master/speedtest_cli.py 1>/dev/null 2>&1
-	bd=`python speedtest_cli.py --share`
-	#apt install speedtest-cli
+	#wget --no-check-certificate https://raw.githubusercontent.com/91yun/speedtest-cli/master/speedtest_cli.py 1>/dev/null 2>&1
+	#bd=`python speedtest_cli.py --share`
+	apt install speedtest-cli
 	#bd=`speedtest-cli --server 12990 --share`
         #bd=`speedtest-cli --share --server 18445`
         #bd=`speedtest-cli --share --server 4505`
-        #bd=`speedtest-cli --share --server 8099`
+        bd=`speedtest-cli --share --server 5861`
         #bd=`speedtest-cli --share`
         download=`echo "$bd" | awk -F ':' '/Download/{print $2}'`
         upload=`echo "$bd" | awk -F ':' '/Upload/{print $2}'`
