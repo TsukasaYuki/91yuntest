@@ -38,7 +38,6 @@ download()
     speed_test 'http://speedtest-tor1.digitalocean.com/100mb.test' 'DigitalOcean, Toronto, Canada'
     speed_test 'http://speedtest-blr1.digitalocean.com/100mb.test' 'DigitalOcean, Tamil Nadu, IN'
     speed_test 'http://tpdb.speed2.hinet.net/test_200m.zip' 'HiNET, Taiwan            '
-    speed_test 'http://speed.anet.net.tw/250M.zip' 'Taiwan Fixed Network, Taiwan'
     speed_test 'http://speed.vee.com.tw/200mb.bin' 'VeeTIME Corp, Taiwan'
 	echo -e "===end ipv4 download===\n\n">>${dir}/$logfilename
 }
